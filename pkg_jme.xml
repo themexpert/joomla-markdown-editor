@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0" method="upgrade">
+    <name>JME</name>
+    <packagename>jme</packagename>
+    <version>1.0.0</version>
+    <url>https://www.themexpert.com/</url>
+    <creationDate>May 22, 2016</creationDate>
+    <copyright>(C) 2012 - 2016. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>shams.bd71@gmail.com</authorEmail>
+    <authorUrl>www.themexpert.com</authorUrl>
+    <author>ThemeXpert</author>
+    <packager>Joomla Markdown Editor</packager>
+    <packagerurl>https://github.com/themexpert/joomla-markdown-editor</packagerurl>
+    <description>Joomla Markdown Editor - JME is a super fast markdown editor for Joomla3</description>
+    <scriptfile>pkg.script.php</scriptfile>
+
+    <files folder="source">
+        <file type="plugin" id="jme" group="editors">plg_editors_jme</file>
+        <file type="plugin" id="jme" client="content">plg_content_jme</file>
+    </files>
+    <updateservers>
+        <server type="extension" priority="1" name="Joomla Markdown Editor Update"><![CDATA[https://raw.githubusercontent.com/themexpert/joomla-markdown-editor/master/manifest.xml]]></server>
+    </updateservers>
+</extension>

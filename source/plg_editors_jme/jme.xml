@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="editors" method="upgrade">
+	<name>JME</name>
+	<version>1.0.0</version>
+	<creationDate>September 2005</creationDate>
+	<author>ThemeXpert</author>
+	<authorEmail>shams.bd71@gmail.com</authorEmail>
+	<authorUrl>www.themexpert.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>Joomla Markdown Editor - JME for Joomla3</description>
+	<media folder="media" destination="jme">
+		<folder>codemirror</folder>
+		<folder>css</folder>
+		<folder>icomon</folder>
+		<folder>js</folder>
+	</media>
+	<files>
+		<filename plugin="jme">jme.php</filename>
+		<filename>Parsedown.php</filename>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_editors_jme.ini</language>
+		<language tag="en-GB">en-GB.plg_editors_jme.sys.ini</language>
+	</languages>
+	
+</extension>

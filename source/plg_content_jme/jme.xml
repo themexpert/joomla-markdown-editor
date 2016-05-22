@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>PLG_JME</name>
+	<author>ThemeXpert</author>
+	<creationDate>May 22 2016</creationDate>
+	<copyright>Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>shams.bd71@gmail.com</authorEmail>
+	<authorUrl>www.themexpert.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Joomla Markdown Editor content plugin</description>
+	<files>
+		<filename plugin="jme">jme.php</filename>
+	</files>
+	 
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_content_jme.ini</language>
+		<language tag="en-GB">en-GB.plg_content_jme.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

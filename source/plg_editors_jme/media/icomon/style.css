@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'jmeicomoon';
+    src:    url('fonts/icomoon.eot?sx21zq');
+    src:    url('fonts/icomoon.eot?sx21zq#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?sx21zq') format('truetype'),
+        url('fonts/icomoon.woff?sx21zq') format('woff'),
+        url('fonts/icomoon.svg?sx21zq#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="jme-icon-"], [class*=" jme-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'jmeicomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.jme-icon-image:before {
+    content: "\e90d";
+}
+.jme-icon-quotes-right:before {
+    content: "\e978";
+}
+.jme-icon-enlarge2:before {
+    content: "\e98b";
+}
+.jme-icon-list-numbered:before {
+    content: "\e9b9";
+}
+.jme-icon-list2:before {
+    content: "\e9bb";
+}
+.jme-icon-link:before {
+    content: "\e9cb";
+}
+.jme-icon-eye:before {
+    content: "\e9ce";
+}
+.jme-icon-bold:before {
+    content: "\ea62";
+}
+.jme-icon-italic:before {
+    content: "\ea64";
+}
+.jme-icon-strikethrough:before {
+    content: "\ea65";
+}
+.jme-icon-embed2:before {
+    content: "\ea80";
+}
+
