@@ -1,38 +1,224 @@
-.jme .CodeMirror-scroll{margin-right:-36px;padding-bottom:36px}.jme-fullscreen{position:fixed;top:0;left:0;bottom:0;right:0;z-index:99999}.jme-fullscreen .jme-content,.jme-fullscreen .jme-code,.jme-fullscreen .CodeMirror-wrap,.jme-fullscreen .jme-preview{height:100%!important}.jme-fullscreen .jme-navbar,.jme-fullscreen .jme-navbar ul li:first-child a,.jme-fullscreen .jme-navbar-flip ul li:last-child a{border-radius:0}
-.jme-navbar{border:1px solid #d5d5d5;border-top-right-radius:4px;border-top-left-radius:4px;background:#f5f5f5;}
-.jme-navbar:after{content:"";display:table;clear:both}.jme-navbar ul{list-style:none;margin:0;padding:0}.jme-navbar ul li{float:left;padding:inherit!important;margin:inherit!important;border-radius:inherit!important;border:inherit!important}.jme-navbar ul li:first-child a{border-top-left-radius:4px}
-.jme-navbar ul .xpertmarkdown-active a{background:#d5d5d5;cursor:auto;border-left:1px solid #d5d5d5;border-right:1px solid #d5d5d5}
-.jme-navbar ul .xpertmarkdown-active a:hover{background:#d5d5d5;color:#444;}.jme-navbar ul a{display:block;cursor:pointer;line-height:39px;height:39px;padding:0 15px;color:#737C81}
-.jme-navbar ul a:hover{background:#d5d5d5;}.jme-navbar-nav{float:left}.jme-navbar-flip{float:right}.jme-navbar-flip ul li:last-child a{border-top-right-radius:4px}.jme-content{cursor:text;border:1px solid #d5d5d5;border-top:0;border-bottom-right-radius:4px;border-bottom-left-radius:4px}.jme-content:after{content:"";display:table;clear:both}.jme-code .CodeMirror{padding:0px;border: none;border-bottom-left-radius:4px}.jme-preview{padding:20px;overflow-y:scroll;position:relative;background:#fbfbfb;border-bottom-right-radius:4px}
-.jme-navbar p{padding:5px 0 5px 15px;font-size: 18px;line-height: 28px;margin:0;font-family: monospace;}#admin-main .jme-preview{font-family:"Lato","Helvetica","Tahoma","Geneva","Arial",sans-serif}#admin-main .jme-preview h1,#admin-main .jme-preview h2,#admin-main .jme-preview h3,#admin-main .jme-preview h4,#admin-main .jme-preview h5,#admin-main .jme-preview h6{color:#5b6266}#admin-main .jme-preview h1{font-size:2rem;border:0}#admin-main .jme-preview h2{font-size:1.6rem}#admin-main .jme-preview h3{font-size:1.4rem}#admin-main .jme-preview h4{font-size:1.2rem}#admin-main .jme-preview h5{font-size:1.1rem}#admin-main .jme-preview p,#admin-main .jme-preview h1{padding:0}[data-mode=tab][data-active-tab=code] .jme-preview,[data-mode=tab][data-active-tab=preview] .jme-code{display:none}[data-mode=split] .jme-button-code,[data-mode=split] .jme-button-preview{display:none}[data-mode=split] .jme-code{border-right:1px solid #d5d5d5}[data-mode=split] .jme-code,[data-mode=split] .jme-code .jme-preview{float:left;width:50%}
-.jme .CodeMirror-gutter{width: 38px;background: #fbfbfb;}
-.jme .CodeMirror-linenumber{text-align: center;}
-.jme .CodeMirror pre{font-size: 14px;line-height: 20px;color: #7B7C81;}
-.jme{margin-bottom: 20px;}
-.jme-navbar ul a i{margin: 0;}
+#jme.jme-wrapper.jme .CodeMirror-scroll {
+  margin-right: -36px;
+  padding-bottom: 36px;
+}
+#jme.jme-wrapper.jme .CodeMirror-gutter {
+  width: 38px;
+  background: #fbfbfb;
+}
+#jme.jme-wrapper.jme .CodeMirror-linenumber {
+  text-align: center;
+}
+#jme.jme-wrapper.jme .CodeMirror pre {
+  font-size: 14px;
+  line-height: 20px;
+  color: #7B7C81;
+}
+#jme.jme-wrapper .jme-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+}
+#jme.jme-wrapper .jme-fullscreen .jme-content {
+  height: 100% !important;
+}
+#jme.jme-wrapper .jme-fullscreen .jme-code {
+  height: 100% !important;
+}
+#jme.jme-wrapper .jme-fullscreen .CodeMirror-wrap {
+  height: 100% !important;
+}
+#jme.jme-wrapper .jme-fullscreen .jme-preview {
+  height: 100% !important;
+}
+#jme.jme-wrapper .jme-fullscreen .jme-navbar {
+  border-radius: 0;
+}
+#jme.jme-wrapper .jme-fullscreen .jme-navbar ul li:first-child a {
+  border-radius: 0;
+}
+#jme.jme-wrapper .jme-fullscreen .jme-navbar-flip ul li:last-child a {
+  border-radius: 0;
+}
+#jme.jme-wrapper .jme-navbar {
+  border: 1px solid #d5d5d5;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  background: #f5f5f5;
+}
+#jme.jme-wrapper .jme-navbar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#jme.jme-wrapper .jme-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#jme.jme-wrapper .jme-navbar ul li {
+  float: left;
+  padding: inherit !important;
+  margin: inherit !important;
+  border-radius: inherit !important;
+  border: inherit !important;
+}
+#jme.jme-wrapper .jme-navbar ul li:first-child a {
+  border-top-left-radius: 4px;
+}
+#jme.jme-wrapper .jme-navbar ul .jme-active a {
+  background: #d5d5d5;
+  cursor: auto;
+  border-left: 1px solid #d5d5d5;
+  border-right: 1px solid #d5d5d5;
+}
+#jme.jme-wrapper .jme-navbar ul .jme-active a:hover {
+  background: #d5d5d5;
+  color: #444;
+}
+#jme.jme-wrapper .jme-navbar ul a {
+  display: block;
+  cursor: pointer;
+  line-height: 39px;
+  height: 39px;
+  padding: 0 15px;
+  color: #737C81;
+}
+#jme.jme-wrapper .jme-navbar ul a:hover {
+  background: #d5d5d5;
+  text-decoration: none;
+}
+#jme.jme-wrapper .jme-navbar ul a i {
+  margin: 0;
+}
+#jme.jme-wrapper .jme-navbar p {
+  padding: 5px 0 5px 15px;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+  font-family: monospace;
+}
+#jme.jme-wrapper .jme-navbar-nav {
+  float: left;
+}
+#jme.jme-wrapper .jme-navbar-flip {
+  float: right;
+}
+#jme.jme-wrapper .jme-navbar-flip ul li:last-child a {
+  border-top-right-radius: 4px;
+}
+#jme.jme-wrapper .jme-content {
+  cursor: text;
+  border: 1px solid #d5d5d5;
+  border-top: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+#jme.jme-wrapper .jme-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#jme.jme-wrapper .jme-code .CodeMirror {
+  padding: 0px;
+  border: none;
+  border-bottom-left-radius: 4px;
+}
+#jme.jme-wrapper .jme-preview {
+  padding: 20px;
+  overflow-y: scroll;
+  position: relative;
+  background: #fbfbfb;
+  border-bottom-right-radius: 4px;
+}
+#jme.jme-wrapper #admin-main .jme-preview {
+  font-family: "Lato", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+#jme.jme-wrapper #admin-main .jme-preview h1 {
+  color: #5b6266;
+  font-size: 2rem;
+  border: 0;
+  padding: 0;
+}
+#jme.jme-wrapper #admin-main .jme-preview h2 {
+  color: #5b6266;
+  font-size: 1.6rem;
+}
+#jme.jme-wrapper #admin-main .jme-preview h3 {
+  color: #5b6266;
+  font-size: 1.4rem;
+}
+#jme.jme-wrapper #admin-main .jme-preview h4 {
+  color: #5b6266;
+  font-size: 1.2rem;
+}
+#jme.jme-wrapper #admin-main .jme-preview h5 {
+  color: #5b6266;
+  font-size: 1.1rem;
+}
+#jme.jme-wrapper #admin-main .jme-preview h6 {
+  color: #5b6266;
+}
+#jme.jme-wrapper #admin-main .jme-preview p {
+  padding: 0;
+}
+#jme.jme-wrapper[data-mode=tab][data-active-tab=code] .jme-preview {
+  display: none;
+}
+#jme.jme-wrapper[data-mode=tab][data-active-tab=preview] .jme-code {
+  display: none;
+}
+#jme.jme-wrapper[data-mode=split] .jme-button-code {
+  display: none;
+}
+#jme.jme-wrapper[data-mode=split] .jme-button-preview {
+  display: none;
+}
+#jme.jme-wrapper[data-mode=split] .jme-code {
+  border-right: 1px solid #d5d5d5;
+  float: left;
+  width: 50%;
+}
+#jme.jme-wrapper[data-mode=split] .jme-code .jme-preview {
+  float: left;
+  width: 50%;
+}
 @media (max-width: 600px) {
-	.jme-navbar{
-		position: relative;
-	}
-	.jme-navbar ul a{
+  #jme.jme-wrapper .jme-navbar {
+    position: relative;
+  }
+  #jme.jme-wrapper .jme-navbar ul a {
     line-height: 30px;
     height: 30px;
     padding: 0 10px;
-	}
-	.jme-navbar ul a [class^="icon-"], [class*=" icon-"]{
-		margin:0px;    
-		font-size: 10px;
-	}
-	.jme-navbar-flip{
+  }
+  #jme.jme-wrapper .jme-navbar ul a [class^="icon-"] {
+    margin: 0px;
+    font-size: 10px;
+  }
+  #jme.jme-wrapper .jme-navbar p {
+    margin: 1px;
+    padding: 0px 0px 0px 10px;
+  }
+  #jme.jme-wrapper [class*=" icon-"] {
+    margin: 0px;
+    font-size: 10px;
+  }
+  #jme.jme-wrapper .jme-navbar-flip {
     position: absolute;
     right: 0px;
     z-index: 1;
     background: #FBFBFB;
-	}
-	.jme .CodeMirror-linenumber,
-	.jme .CodeMirror-gutter{width: 25px !important;padding: 0px;}
-	.jme-navbar p{
-    margin: 1px;
-    padding: 0px 0px 0px 10px;
-	}
+  }
+  #jme.jme-wrapper.jme .CodeMirror-linenumber {
+    width: 25px !important;
+    padding: 0px;
+  }
+  #jme.jme-wrapper.jme .CodeMirror-gutter {
+    width: 25px !important;
+    padding: 0px;
+  }
 }

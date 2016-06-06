@@ -103,7 +103,7 @@ jQuery(function($) {
             this.options = $.extend({}, this.defaults, options);
             this.CodeMirror = CodeMirror;
             this.buttons = {};
-            template = ['<div class="jme clearfix" data-mode="tab" data-active-tab="code">', '<div class="jme-navbar">', '<ul class="jme-navbar-nav jme-toolbar"></ul>', '<div class="jme-navbar-flip">', '<ul class="jme-navbar-nav">'];
+            template = ['<div id="jme" class="jme-wrapper jme clearfix" data-mode="tab" data-active-tab="code">', '<div class="jme-navbar">', '<ul class="jme-navbar-nav jme-toolbar"></ul>', '<div class="jme-navbar-flip">', '<ul class="jme-navbar-nav">'];
             template.push('<li class="jme-button-code jme-active"><a>{:lblCodeview}</a></li>');
             template.push('<li class="jme-button-preview"><a>{:lblPreview}</a></li>');
             template.push('<li><a data-jme-button="fullscreen"><i class="jme-icon-enlarge2"></i></a></li>', '</ul>', '</div>', '<p class="jme-preview-text" style="display: none;">Preview</p>', '</div>', '<div class="jme-content">', '<div class="jme-code"></div>', '<div class="jme-preview"><div></div></div>', '</div>', '</div>');

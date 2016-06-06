@@ -1,0 +1,278 @@
+@color_1: #444;
+@color_2: #737C81;
+@color_3: #5b6266;
+@color_4: #7B7C81;
+@font-family_1: monospace;
+@font-family_2: "Lato", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+#jme.jme-wrapper{
+	&.jme {
+		.CodeMirror-scroll {
+			margin-right: -36px;
+			padding-bottom: 36px;
+		}
+		.CodeMirror-gutter {
+			width: 38px;
+			background: #fbfbfb;
+		}
+		.CodeMirror-linenumber {
+			text-align: center;
+		}
+		.CodeMirror {
+			pre {
+				font-size: 14px;
+				line-height: 20px;
+				color: @color_4;
+			}
+		}
+	}
+	.jme-fullscreen {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 99999;
+		.jme-content {
+			height: 100% !important;
+		}
+		.jme-code {
+			height: 100% !important;
+		}
+		.CodeMirror-wrap {
+			height: 100% !important;
+		}
+		.jme-preview {
+			height: 100% !important;
+		}
+		.jme-navbar {
+			border-radius: 0;
+			ul {
+				li {
+					&:first-child {
+						a {
+							border-radius: 0;
+						}
+					}
+				}
+			}
+		}
+		.jme-navbar-flip {
+			ul {
+				li {
+					&:last-child {
+						a {
+							border-radius: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	.jme-navbar {
+		border: 1px solid #d5d5d5;
+		border-top-right-radius: 4px;
+		border-top-left-radius: 4px;
+		background: #f5f5f5;
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				float: left;
+				padding: inherit !important;
+				margin: inherit !important;
+				border-radius: inherit !important;
+				border: inherit !important;
+				&:first-child {
+					a {
+						border-top-left-radius: 4px;
+					}
+				}
+			}
+			.jme-active {
+				a {
+					background: #d5d5d5;
+					cursor: auto;
+					border-left: 1px solid #d5d5d5;
+					border-right: 1px solid #d5d5d5;
+					&:hover {
+						background: #d5d5d5;
+						color: @color_1;
+					}
+				}
+			}
+			a {
+				display: block;
+				cursor: pointer;
+				line-height: 39px;
+				height: 39px;
+				padding: 0 15px;
+				color: @color_2;
+				&:hover {
+					background: #d5d5d5;
+					text-decoration: none;
+				}
+				i {
+					margin: 0;
+				}
+			}
+		}
+		p {
+			padding: 5px 0 5px 15px;
+			font-size: 18px;
+			line-height: 28px;
+			margin: 0;
+			font-family: @font-family_1;
+		}
+	}
+	.jme-navbar-nav {
+		float: left;
+	}
+	.jme-navbar-flip {
+		float: right;
+		ul {
+			li {
+				&:last-child {
+					a {
+						border-top-right-radius: 4px;
+					}
+				}
+			}
+		}
+	}
+	.jme-content {
+		cursor: text;
+		border: 1px solid #d5d5d5;
+		border-top: 0;
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+	.jme-code {
+		.CodeMirror {
+			padding: 0px;
+			border: none;
+			border-bottom-left-radius: 4px;
+		}
+	}
+	.jme-preview {
+		padding: 20px;
+		overflow-y: scroll;
+		position: relative;
+		background: #fbfbfb;
+		border-bottom-right-radius: 4px;
+	}
+	#admin-main {
+		.jme-preview {
+			font-family: @font-family_2;
+			h1 {
+				color: @color_3;
+				font-size: 2rem;
+				border: 0;
+				padding: 0;
+			}
+			h2 {
+				color: @color_3;
+				font-size: 1.6rem;
+			}
+			h3 {
+				color: @color_3;
+				font-size: 1.4rem;
+			}
+			h4 {
+				color: @color_3;
+				font-size: 1.2rem;
+			}
+			h5 {
+				color: @color_3;
+				font-size: 1.1rem;
+			}
+			h6 {
+				color: @color_3;
+			}
+			p {
+				padding: 0;
+			}
+		}
+	}
+	&[data-mode=tab][data-active-tab=code] {
+		.jme-preview {
+			display: none;
+		}
+	}
+	&[data-mode=tab][data-active-tab=preview] {
+		.jme-code {
+			display: none;
+		}
+	}
+	&[data-mode=split] {
+		.jme-button-code {
+			display: none;
+		}
+		.jme-button-preview {
+			display: none;
+		}
+		.jme-code {
+			border-right: 1px solid #d5d5d5;
+			float: left;
+			width: 50%;
+			.jme-preview {
+				float: left;
+				width: 50%;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	#jme.jme-wrapper{
+
+		.jme-navbar {
+			position: relative;
+			ul {
+				a {
+					line-height: 30px;
+					height: 30px;
+					padding: 0 10px;
+					[class^="icon-"] {
+						margin: 0px;
+						font-size: 10px;
+					}
+				}
+			}
+			p {
+				margin: 1px;
+				padding: 0px 0px 0px 10px;
+			}
+		}
+		[class*=" icon-"] {
+			margin: 0px;
+			font-size: 10px;
+		}
+		.jme-navbar-flip {
+			position: absolute;
+			right: 0px;
+			z-index: 1;
+			background: #FBFBFB;
+		}
+		&.jme {
+			.CodeMirror-linenumber {
+				width: 25px !important;
+				padding: 0px;
+			}
+			.CodeMirror-gutter {
+				width: 25px !important;
+				padding: 0px;
+			}
+		}
+	}
+}
