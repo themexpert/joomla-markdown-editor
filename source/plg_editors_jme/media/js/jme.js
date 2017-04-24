@@ -177,6 +177,7 @@ jQuery(function($) {
             this.jme.on('click', '.jme-button-code, .jme-button-preview', function(e) {
                 var task = 'task' + JMEAdmin.config.param_sep;
                 e.preventDefault();
+                $this.preview.container.html('<h3>Loading...</h3>');
                 if ($this.jme.attr('data-mode') == 'tab') {
                     if ($(this).hasClass('jme-button-preview')) {
                         var url = JMEAdmin.config.base_url_relative + 'index.php?option=com_ajax&plugin=jme&group=editors&format=html';
