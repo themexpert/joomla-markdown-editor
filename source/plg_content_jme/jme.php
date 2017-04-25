@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     Joomla.Plugin
- * @subpackage  Content.loadmodule
+ * @subpackage  Editors.JME
  *
  * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -9,11 +9,11 @@
 
 defined('_JEXEC') or die;
 
+
 /**
- * Plug-in to enable loading modules into content (e.g. articles)
- * This uses the {loadmodule} syntax
+ * Joomla Markdown Editor Plugin
  *
- * @since  1.5
+ * @since  1.0
  */
 class PlgContentJME extends JPlugin
 {
